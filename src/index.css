@@ -1,0 +1,254 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Social Network Design System - Modern & Minimalist 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Base colors */
+    --background: 250 50% 98%;
+    --foreground: 215 25% 27%;
+
+    /* Card system */
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 27%;
+    --card-shadow: 215 25% 27% / 0.05;
+
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 27%;
+
+    /* Primary - Beautiful blue theme */
+    --primary: 213 94% 68%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 213 94% 62%;
+    --primary-light: 213 94% 95%;
+
+    /* Secondary */
+    --secondary: 214 32% 91%;
+    --secondary-foreground: 215 25% 27%;
+    --secondary-hover: 214 32% 87%;
+
+    /* Muted */
+    --muted: 214 32% 91%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Accent */
+    --accent: 213 94% 95%;
+    --accent-foreground: 213 94% 68%;
+
+    /* Status colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --success: 142 76% 36%;
+    --success-foreground: 210 40% 98%;
+
+    /* Border and input */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 213 94% 68%;
+
+    /* Social-specific colors */
+    --social-bg: 250 50% 98%;
+    --social-card: 0 0% 100%;
+    --social-hover: 213 94% 97%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(213 94% 68%), hsl(213 94% 82%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(214 32% 98%));
+    --gradient-hero: linear-gradient(135deg, hsl(213 94% 68%) 0%, hsl(213 94% 82%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(215 25% 27% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(215 25% 27% / 0.1), 0 2px 4px -1px hsl(215 25% 27% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(215 25% 27% / 0.1), 0 4px 6px -2px hsl(215 25% 27% / 0.05);
+    --shadow-card: 0 4px 12px hsl(215 25% 27% / 0.08);
+
+    /* Animations */
+    --transition-base: all 0.2s ease-in-out;
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Base colors */
+    --background: 215 28% 17%;
+    --foreground: 210 40% 98%;
+
+    /* Card system */
+    --card: 215 28% 17%;
+    --card-foreground: 210 40% 98%;
+    --card-shadow: 0 0% 0% / 0.1;
+
+    /* Popover */
+    --popover: 215 28% 17%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Primary - Adapted for dark mode */
+    --primary: 213 94% 68%;
+    --primary-foreground: 215 28% 17%;
+    --primary-hover: 213 94% 72%;
+    --primary-light: 213 94% 25%;
+
+    /* Secondary */
+    --secondary: 217 33% 22%;
+    --secondary-foreground: 210 40% 98%;
+    --secondary-hover: 217 33% 26%;
+
+    /* Muted */
+    --muted: 217 33% 22%;
+    --muted-foreground: 215 20% 65%;
+
+    /* Accent */
+    --accent: 213 94% 25%;
+    --accent-foreground: 213 94% 68%;
+
+    /* Status colors */
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --success: 142 76% 36%;
+    --success-foreground: 210 40% 98%;
+
+    /* Border and input */
+    --border: 217 33% 22%;
+    --input: 217 33% 22%;
+    --ring: 213 94% 68%;
+
+    /* Social-specific colors */
+    --social-bg: 215 28% 17%;
+    --social-card: 217 33% 19%;
+    --social-hover: 213 94% 20%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(213 94% 68%), hsl(213 94% 55%));
+    --gradient-card: linear-gradient(145deg, hsl(217 33% 19%), hsl(217 33% 22%));
+    --gradient-hero: linear-gradient(135deg, hsl(213 94% 68%) 0%, hsl(213 94% 55%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.1);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.2), 0 2px 4px -1px hsl(0 0% 0% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.2), 0 4px 6px -2px hsl(0 0% 0% / 0.1);
+    --shadow-card: 0 4px 12px hsl(0 0% 0% / 0.15);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-social-bg text-foreground font-sans antialiased;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/20 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/30;
+  }
+}
+
+@layer components {
+  /* Social card component */
+  .social-card {
+    @apply bg-social-card rounded-xl border border-border shadow-card transition-all duration-200 hover:shadow-lg;
+  }
+
+  /* Social button variants */
+  .btn-social {
+    @apply inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply btn-social bg-primary text-primary-foreground hover:bg-primary-hover;
+  }
+
+  .btn-secondary {
+    @apply btn-social bg-secondary text-secondary-foreground hover:bg-secondary-hover;
+  }
+
+  .btn-ghost {
+    @apply btn-social hover:bg-accent hover:text-accent-foreground;
+  }
+
+  /* Feed animations */
+  .feed-enter {
+    @apply animate-fade-in;
+  }
+
+  .card-hover {
+    @apply hover:scale-[1.02] transition-transform duration-200;
+  }
+}
+
+@layer utilities {
+  /* Custom animations */
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
